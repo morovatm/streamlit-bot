@@ -12,10 +12,10 @@ def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="mistral-sm
   else:
     return "Login on the Functions tab for limited demo usage, or sign up for a free Mistral AI account at https://console.mistral.ai/ and add your own api_key."
 
-if not isinstance(temperature, (float, int)) or not (0 <= float(temperature) <= 2):
-  return "Error: temperature must be a float between 0 and 2 (inclusive)"
-if not isinstance(max_tokens, (float, int)) or not (5 <= float(max_tokens) <= 5000):
-  return "Error: max_tokens must be a number between 5 and 5000 (inclusive)"
+  if not isinstance(temperature, (float, int)) or not (0 <= float(temperature) <= 2):
+    return "Error: temperature must be a float between 0 and 2 (inclusive)"
+  if not isinstance(max_tokens, (float, int)) or not (5 <= float(max_tokens) <= 5000):
+    return "Error: max_tokens must be a number between 5 and 5000 (inclusive)"
 
 # Construct the message incorporating both prompt and data if provided
 message = prompt
