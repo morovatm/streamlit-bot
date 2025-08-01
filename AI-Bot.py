@@ -25,15 +25,15 @@ if data is not None:
 
 # Prepare the API request payload
 payload = {
-"messages": [{"role": "user", "content": message}],
-"temperature": float(temperature),
-"model": model,
-"max_tokens": int(max_tokens)
+  "messages": [{"role": "user", "content": message}],
+  "temperature": float(temperature),
+  "model": model,
+  "max_tokens": int(max_tokens)
 }
 headers = {
-"Authorization": f"Bearer {api_key}",
-"Content-Type": "application/json",
-"Accept": "application/json"
+  "Authorization": f"Bearer {api_key}",
+  "Content-Type": "application/json",
+  "Accept": "application/json"
 }
 
 # Make the API request
