@@ -43,7 +43,7 @@ if response.status_code == 429:
 try:
   response.raise_for_status()
   response_data = response.json()
-content = response_data["choices"][0]["message"]["content"]
+  content = response_data["choices"][0]["message"]["content"]
   return content
 except Exception as e:
   return f"Error: {str(e)}"
